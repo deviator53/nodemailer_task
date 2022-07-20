@@ -1,11 +1,13 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+
  
  
 let mailTransporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
         user: 'davidbradforduko@outlook.com',
-        pass: 'Suduko@1234'
+        pass: process.env.PASS
     }
 });
  
